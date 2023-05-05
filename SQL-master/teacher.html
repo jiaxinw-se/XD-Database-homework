@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>学生信息系统--教师端</title>
+    <style></style>
+</head>
+<body>
+    <ul class="top">
+        <li><a href="index.html">登录界面</a></li>
+        <li><a href="#StudentMessage">学生学籍</a></li>
+        <li><a href="#StudentClass">学生成绩</a></li>
+        <li><a href="#StudentScore">课程设置</a></li>
+    </ul>
+    <section id="StudentMessage">
+
+        <div>
+            <form class="addStudentFrom">
+                <div>学生学号:<input type="text" id="inputID" placeholder="请输入学号" oninput="checkID(this,10)"></div>
+                <div>学生姓名:<input type="text" id="inputName" placeholder="请输入姓名"></div>
+                <div>学生性别:<input type="text" id="inputSex" list="sexlist" placeholder="请选择性别"></div>
+                <datalist id="sexlist">
+                    <option value="男"></option>
+                    <option value="女"></option>
+                </datalist>
+                <div>学生年龄:<input type="text" id="inputAge" placeholder="请输入年龄"></div>
+                <div>学生年级:<input type="text" id="inputGrade" list="gradelist" placeholder="请选择年级">
+                <datalist id="gradelist">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                </datalist>
+                </div>
+                <input type="button" value="注册学生信息" onclick="addUser(inputID.value,inputName.value,inputSex.value,inputAge.value,inputGrade.value)">
+                <input type="button" value="查看学生信息" onclick="searchAllMessage()">
+                
+            </form>
+
+            <div class="table">
+                <table id="studentTable" cellspaceing="0"> 
+                    <tr class="thead">
+                        <td>学生学号</td>
+                        <td>学生姓名</td>
+                        <td>学生性别</td>
+                        <td>学生年龄</td>
+                        <td>学生年级</td>
+                        <td>修改信息</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="StudentClass">
+        <div>
+            <form class="addStudentFrom">
+                <div>学生学号:<input type="text" id="inputClassStudentID" placeholder="请输入学号" oninput="checkID(this,10)"></div>
+                <div>课程编号:<input type="text" id="inputClassID" placeholder="请输入课程编号" list="classIDlist"></div>
+                <datalist id="classIDlist">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                </datalist>
+                <div>学生成绩:<input type="text" id="inputScore" placeholder="请输入学生成绩"></div>
+                <input type="button" value="登记学生成绩" onclick="addScore(inputClassStudentID.value,inputClassID.value,inputScore.value)">
+                <input type="button" value="查看学生成绩" onclick="searchAllScore(1)">
+                <br>
+                <input type="button" value="统计挂科同学" onclick="searchAllScore(2)">
+                <input type="button" value="按照成绩排序" onclick="searchAllScore(3)">
+            </form>
+            <div class="table" style="width: 800px;">
+                <table id="allScoreTable" cellspaceing="0"> 
+                    <tr class="thead">
+                        <td>课程ID</td>
+                        <td>课程名称</td>
+                        <td>学生学号</td>
+                        <td>学生姓名</td>
+                        <td>学生成绩</td>
+                        <td>取得学分</td>    
+                        <td>删除成绩</td>                                                                                                                                                           
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <section id="StudentScore">
+        <div>
+            <form class="addStudentFrom">
+                <div>课程编号:<input type="text" id="registerClassID" placeholder="请输入课程编号"></div>
+                <div>课程名称:<input type="text" id="registerClassName" placeholder="请输入课程名称"></div>
+                <div>课程学分:<input type="text" id="registerClassCount" placeholder="请输入课程学分"></div>
+                <input type="button" value="添加新的课程" onclick="addClass(registerClassID.value,registerClassName.value,registerClassCount.value)">
+                <input type="button" value="查看课程列表" onclick="searchAllClass()">
+            </form>
+            <div class="table">
+                <table id="classTable" cellspaceing="0"> 
+                    <tr class="thead">
+                        <td>课程编号</td>
+                        <td>课程名称</td>
+                        <td>课程学分</td>
+                        <td>删除课程</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </section>
+</body>
+    <script src="js/student.js"   type="text/javascript"></script>
+    <script src="js/checkFrom.js" type="text/javascript"></script>
+    <script src="js/score.js"     type="text/javascript"></script>
+    <script src="js/class.js"     type="text/javascript"></script>
+</html>

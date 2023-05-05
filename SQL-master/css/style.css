@@ -1,0 +1,219 @@
+
+body{
+    padding:0;
+    margin:0;
+    margin-top: -36px;
+    font-family: "微软雅黑";
+    background-color: whitesmoke;
+}
+
+/* 登录界面 */
+#register{
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-top: #f9d5a8 70px solid;
+    border-radius: 20px;
+}
+
+#register .choice{
+    margin: 90px auto;
+    width: 180px;
+    height: 100px;
+}
+
+#register ul{
+    padding: 0;
+    margin: 0;
+}
+
+#register  li{
+    height: 55px;
+    line-height: 55px;
+    list-style: none;
+    margin-top: 44px;
+    text-align: center;
+    background-color: royalblue;
+    border-radius: 20px;
+    box-shadow: gray 2px 2px 2px;
+}
+
+#register a{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: rgb(37, 36, 36);
+    text-decoration: none;
+}
+
+.top {
+    /* 头部导航栏 */
+    background-color: royalblue;
+    position: fixed;
+    width: 100%;
+    top: -17px;
+    z-index: 9999;
+}
+
+.top>li{
+    /* 头部导航栏单元格 */
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.top a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.addStudentFrom{
+    /*添加学生信息表单*/
+    background-color: #91B2B1;
+    margin: 75px auto;
+    margin-bottom: 50px;
+    width:300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.addStudentFrom>div{
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    margin-left:30px;
+    color: #2F696C;
+    font-weight: bold;
+}
+
+.addStudentFrom input{
+    height: 30px;
+    border-radius: 7.5px;
+    padding-left:5px;
+    margin-left:10px;
+    border:1px solid #2F696C;
+}
+
+.addStudentFrom input[type=submit]{
+    height: 40px;
+    font-family:"微软雅黑";
+    font-weight: bold;
+    font-size: 16.5px;
+    line-height: 40px;
+    list-style: none;
+    text-align: center;
+    background-color: #2F696C;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: gray 2px 2px 2px;
+    border:none;
+    margin-left: 20px;
+    color:#f9d5a8;
+}
+
+.addStudentFrom input[type=button]{
+    height: 40px;
+    font-family:"微软雅黑";
+    font-weight: bold;
+    font-size: 16.5px;
+    line-height: 40px;
+    list-style: none;
+    text-align: center;
+    background-color: #2F696C;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: gray 2px 2px 2px;
+    border:none;
+    margin-left: 20px;
+    color:#f9d5a8;
+    margin-top: 10px;
+}
+
+.addStudentFrom>button{
+    margin:0 16px;
+}
+
+.table{
+    /* 信息表格 */
+    margin: 35px auto;
+    width: 600px;
+    background-color: skyblue;
+    border-collapse: collapse;
+    padding:20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.table td{
+    /* 表格单元格 */
+    margin:20px;
+    color:black;
+    font-weight: bold;
+    width: 110px;
+    height: 40px;
+}
+
+.thead>td{
+    /* 表格头部 */
+    border-top:black 2px solid;
+    border-bottom: black 2px solid;
+    height: 50px;
+    font-weight: bold;
+    color:#2F696C;
+}
+
+.delBtn{
+    /* 表格删除按钮 */
+    height: 30px;
+    background-color: #2F696C;
+    border-radius: 5px;
+    color:#f9d5a8;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    border:none;
+    box-shadow: gray 2px 2px 2px;
+    margin:1px auto;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+#StudentMessage{
+    /* 学生信息section */
+    height: auto;
+    width: 100%;
+    background-color: #E6E3DB;
+}
+
+#StudentClass{
+    /* 学生选课section */
+    background-color: #E6E3DB;
+    width: 100%;
+    height: auto;
+    margin-top:-20px;
+}
+
+
+#scoreTable{
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+}
+
+#MyTable{
+    position: relative;
+}
+
+#StudentScore{
+    height: auto;
+    position: relative;
+}
+
+#classTable{
+    margin: 0px auto;
+}
